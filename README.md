@@ -161,7 +161,7 @@ Minhas principais responsabilidades foram:
 
 ---
 
-# 📈 Possíveis Melhorias Futuras
+# 📈 Melhorias Futuras
 
 - Implementação de API REST
 - Ajustar o projeto para usar o Spring Boot
