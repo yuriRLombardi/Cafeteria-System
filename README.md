@@ -1,85 +1,183 @@
-# Cafeteria
+# ☕ Cafeteria System
 
-Este projeto é uma aplicação web Java para gerenciar uma cafeteria, permitindo cadastro e autenticação de usuários, registro e manutenção de produtos, consulta de cardápio e operações relacionadas a validade e entrega.
+Aplicação web desenvolvida para gerenciamento de cafeteria, permitindo autenticação de usuários, gerenciamento de produtos e exibição de cardápio.
 
-## Visão geral
+O projeto foi desenvolvido utilizando Java, JSP, Servlets e MySQL, aplicando conceitos de arquitetura MVC, integração com banco de dados e operações CRUD.
 
-A aplicação oferece as seguintes funcionalidades:
-- Cadastro de usuários da cafeteria
-- Login e controle de sessão para usuário autenticado
-- Cadastro de produtos com nome, descrição, preço, validade, ingredientes e taxa
-- Listagem de produtos do cardápio
+---
+
+# 🎯 Objetivo
+
+Desenvolver uma aplicação web para gerenciamento de produtos e usuários de uma cafeteria, com foco na prática de desenvolvimento back-end, organização de sistemas web e integração entre front-end e back-end.
+
+---
+
+# ⚙️ Funcionalidades
+
+- Cadastro de usuários
+- Autenticação e controle de sessão
+- Cadastro de produtos
 - Atualização e remoção de produtos
-- Visualização de validade, ingredientes e cálculo de entrega para produtos
-- Uso de cookies para armazenar informações temporárias sobre o produto
+- Listagem de produtos do cardápio
+- Exibição de ingredientes e validade
+- Cálculo de taxa de entrega
+- Armazenamento temporário de informações utilizando cookies
 
-## Estrutura do projeto
+---
 
-A aplicação segue a arquitetura MVC (Model-View-Controller):
+# 🛠️ Tecnologias Utilizadas
 
-- Model (modelo): `src/main/java/model/`
-  - Contém as entidades do sistema e as classes DAO que gerenciam persistência e lógica de negócios.
-- View (visão): `src/main/webapp/`
-  - Contém páginas JSP, HTML, CSS e recursos de interface usados para exibir o cardápio, formulários de cadastro/login e status.
-- Controller (controlador): `src/main/java/controller/`
-  - `CafeteriaController.java` - servlet que trata operações de produtos
-  - `UsuarioController.java` - servlet que trata autenticação, cadastro, logout e remoção de usuário
-- `src/main/resources/META-INF/persistence.xml` - configuração JPA/Hibernate para conexão com MySQL
-- `pom.xml` - arquivo de build Maven com dependências e configuração do projeto
-
-## Tecnologias usadas
-
+## Back-end
 - Java 21
-- Jakarta Servlet / JSP
-- JSTL Core e Fucntions
+- Jakarta Servlet
+- JSP
+- JSTL
+- JPA / Hibernate
+
+## Front-end
+- HTML
+- CSS
+- JavaScript
+
+## Banco de Dados
+- MySQL
+
+## Ferramentas
 - Maven
-- JPA com Hibernate
-- MySQL Connector/J
-- MySQL como banco de dados
-- HTML, CSS e JavaScript para interface web
+- Git
+- GitHub
+- Eclipe Java EE
 
-## Build e execução
+---
 
-1. Configure o banco de dados MySQL com os dados de conexão definidos em `src/main/resources/META-INF/persistence.xml`.
+# 🧠 Conceitos Aplicados
 
-### Opção 1: Usando Maven no terminal
+- Arquitetura MVC
+- CRUD
+- Programação Orientada a Objetos (POO)
+- Integração com banco de dados
+- Controle de sessão
+- Manipulação de cookies
+- Organização em camadas
+- Persistência de dados com JPA/Hibernate
 
-2. No diretório do projeto, execute:
-   ```bash
-   mvn clean package
-   ```
-3. Implante o arquivo WAR gerado no servidor de aplicação compatível com Jakarta EE (por exemplo, Tomcat).
-4. Acesse a aplicação pelo navegador usando a URL do servidor.
+---
 
-### Opção 2: Usando Eclipse IDE for Enterprise Java and Web Developers
+# 📂 Estrutura do Projeto
 
-2. Abra o Eclipse e escolha `File > Import...`.
-3. Selecione `Existing Maven Projects` em `Maven` e clique em `Next`.
-4. Navegue até a pasta do projeto e clique em `Finish`.
-5. Aguarde o Eclipse importar as dependências e construir o projeto.
-6. Configure um servidor de aplicação no Eclipse (por exemplo, Tomcat ou WildFly):
-   - Vá em `Window > Show View > Servers`.
-   - Clique com o botão direito em `No servers are available. Click this link to create a new server...`.
-   - Escolha o servidor e a versão compatível com Jakarta EE.
-7. Clique com o botão direito no projeto importado, escolha `Run As > Run on Server`.
-8. O Eclipse publicará automaticamente o projeto no servidor.
-9. Abra o navegador e acesse a URL fornecida pelo Eclipse para a aplicação.
+```plaintext
+src/
+ ├── main/
+ │    ├── java/
+ │    │     ├── controller/
+ │    │     ├── model/
+ │    │
+ │    ├── resources/
+ │    │     └── META-INF/
+ │    │
+ │    └── webapp/
+ │          ├── css/
+ │          ├── js/
+ │          ├── images/
+ │          └── WEB-INF/
+```
 
-## Configuração de banco de dados
+---
 
-O `persistence.xml` define a conexão com um banco MySQL local:
-- URL: `jdbc:mysql://localhost:3306/cafeteria`
-- Driver: `com.mysql.cj.jdbc.Driver`
-- Usuário: `cafeteria`
-- Senha: `cafe`
-- Dialeto: `org.hibernate.dialect.MySQL8Dialect`
-- `hibernate.hbm2ddl.auto=update` para atualizar o esquema automaticamente
+# 🚀 Como Executar
 
-> Ajuste as credenciais e a URL conforme necessário para o seu ambiente.
+## 1️⃣ Clone o repositório
 
-# Minha Contribuição
+```bash
+git clone https://github.com/seu-usuario/cafeteria-system.git
+```
 
-- Estruturação do Projeto
-- Criação do Banco de dados
-- Desenvolvimento Back-end da aplicação
-- Participação parcial no desenvolvimento front-end com Javascript e aplicação do JSTL
+---
+
+## 2️⃣ Acesse a pasta do projeto
+
+```bash
+cd cafeteria-system
+```
+
+---
+
+## 3️⃣ Configure o banco de dados
+
+Edite o arquivo:
+
+```plaintext
+src/main/resources/META-INF/persistence.xml
+```
+
+Configure:
+- URL do banco
+- usuário
+- senha
+
+---
+
+## 4️⃣ Execute o build
+
+```bash
+mvn clean package
+```
+
+---
+
+## 5️⃣ Execute no servidor
+
+Implante o arquivo `.war` gerado em um servidor compatível com Jakarta EE:
+
+- Apache Tomcat
+- WildFly
+
+---
+
+# 🗄️ Configuração do Banco de Dados
+
+Exemplo de configuração utilizada:
+
+```xml
+<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cafeteria"/>
+<property name="jakarta.persistence.jdbc.user" value="cafeteria"/>
+<property name="jakarta.persistence.jdbc.password" value="cafe"/>
+```
+
+---
+
+# 👨‍💻 Minha Contribuição
+
+Projeto desenvolvido em grupo com 3 integrantes.
+
+Minhas principais responsabilidades foram:
+
+- Desenvolvimento completo do back-end
+- Estruturação da arquitetura MVC
+- Integração com banco de dados MySQL
+- Implementação das regras de negócio
+- Desenvolvimento de autenticação e CRUD
+- Participação parcial no front-end utilizando JavaScript e JSTL
+
+---
+
+# 📈 Possíveis Melhorias Futuras
+
+- Implementação de API REST
+- Ajustar o projeto para usar o Spring Boot
+- Sistema de pedidos online
+- Dashboard administrativo
+- Melhorias de responsividade
+- Integração com sistema de pagamento
+
+---
+
+# 👨‍💻 Autor
+
+**Yuri Rodrigues Lombardi**
+
+🔗 LinkedIn:  
+https://linkedin.com/in/yuri-rodrigues-lombardi
+
+💻 GitHub:  
+https://github.com/yuriRLombardi
