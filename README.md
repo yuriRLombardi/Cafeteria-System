@@ -8,7 +8,7 @@ O projeto foi desenvolvido utilizando Java, JSP, Servlets e MySQL, aplicando con
 
 ### 🎥 Demonstração da Aplicação
 
-![Demo](./docs/images/demo-cafeteria.gif)
+![Demo](./docs/images/demo.gif)
 
 ---
 
