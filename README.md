@@ -107,6 +107,7 @@ Desenvolver uma aplicação web para gerenciamento de produtos e usuários de um
 - Manipulação de cookies
 - Organização em camadas
 - Persistência de dados com JPA/Hibernate
+- Data Access Object(DAO)
 
 ---
 
@@ -181,7 +182,7 @@ Exemplo de configuração utilizada:
 
 ---
 
-# 👨‍💻 Minha Contribuição
+# 👥 Minha Contribuição
 Projeto desenvolvido em grupo com 3 integrantes.
 Minhas principais responsabilidades foram:
 - Desenvolvimento completo do back-end
